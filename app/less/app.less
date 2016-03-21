@@ -1,0 +1,166 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+    
+    .header h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+}
+
+.sec-wrap {
+    display: block;
+    position: relative;
+    margin: 5rem auto;
+    padding: 2rem 1rem; 
+    clear: both;
+    float: left;
+    width: 100%;
+    height: auto;
+//    min-height: 450px;
+    background: rgba(0,0,0,.4);
+    
+    .container {
+        padding: 1rem;
+        margin: auto;
+        max-width: 1280px;
+    }
+    &.bg-white {
+        background: #fff;
+    }
+    &.sec-lg {
+        min-height: 600px;
+    }
+}
+.sec-line-wrap {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 95%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    
+    > div {
+        position: absolute;
+        padding: 0;
+        float: none;
+        clear: none;
+    }
+}
+.preview-content {
+    color: white;
+}
+.vid-preview-sec {
+    position: relative;
+    height: 100%;
+    min-height: 150px;
+    margin: -6% auto 0;
+    
+    .mac-vid-holder,
+    .iphone-vid-holder {
+         position: absolute;
+         background-color: white;
+         background-repeat: no-repeat;
+         background-size: cover;
+         margin: auto;
+         padding: 0;
+         max-width: 100%;
+         width: auto;
+        z-index: 1;
+    }
+    .vid-bg-wrap {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-animation: fadeIn 1s 2s both;
+        animation: fadeIn 1s 2s both;
+    }
+    .mac-wrap {
+        position: relative;
+        z-index: 1;
+        
+        .mac-vid-holder {
+            top: 6.5%;
+            bottom: 15.5%;
+            left: 18.5%;
+            right: 18.5%; 
+        
+        }
+    }
+    .iphone-wrap {
+        position: absolute;
+        bottom: 0;
+        right: 3rem;
+        z-index: 5;
+        
+        .iphone-vid-holder {
+            top: 15.5%;
+            bottom: 19.5%;
+            left: 14%;
+            right: 14.5%;   
+            
+            @media(max-screen: 768px){
+                width: 60%;
+            }
+        }
+    } 
+}
+
+.ft-banner {
+    background: url('http://placekitten.com/g/2000/1000') no-repeat center;
+    background-size: cover;
+    height: 450px;
+}
+.foot-wrap { 
+    width: 100%; 
+    min-height: 350px; 
+    background: rgba(0,0,0,.75); 
+    display: block; 
+    clear: both; 
+    padding: 2rem; 
+    margin: auto; 
+    
+    .footer {
+        padding-top: 19px;
+        color: #777;
+        border-top: 1px solid #e5e5e5;
+    }
+}
+.fadeOut {
+    -webkit-animation: fadeOut .6s .5s both;
+    animation: fadeOut .6s .5s both;
+}
+@-webkit-keyframes fadeOut {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+.fadeIn {
+    -webkit-animation: fadeIn .6s .5s both;
+    animation: fadeIn .6s .5s both;
+}
+@-webkit-keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
